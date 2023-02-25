@@ -73,5 +73,6 @@
 		"text",
 		"track",
 		"width"
-	]
+	],
+	"typescript.tsdk": "node_modules\\typescript\\lib"
 }

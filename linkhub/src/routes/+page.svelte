@@ -1,4 +1,4 @@
-<!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
+
 
 <div class="wrapper w-full h-full">
  <header class="w-full h-full">
@@ -13,7 +13,6 @@
 						</div>
 					</div>
 				</div>
-				
 			</div>
 			
 		</div>
