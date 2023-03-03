@@ -5,7 +5,20 @@
 		arr[index] = index;
 	}
 </script>
-<div class="wrapper w-full h-full bg-surface-500">
+
+<div class="content w-full h-full bg-surface-500">
+	<div class="page-links w-full h-full overflow-y-scroll p-8 grid grid-cols-1  2xl:grid-cols-6 gap-8 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-4 md:gap-[50px] sm:grid-cols-2  lg:max-h-[100%] md:max-h-[100%] sm:max-h-[100%]">
+		{#each arr as i }
+			<div class="page__link  bg-primary-500 h-24 w-48 rounded-3xl flex justify-center items-center">
+				<div class="page__link-container leading-none max-w-[200px] overflow-hidden mx-6">
+					<div class="page__name  font-bold text-md">name {i + 1}</div>
+					<div class="page__url font-semibold text-sm text-secondary-500 lowercase">url {i + 1}</div>
+				</div>
+			</div>
+			{/each}
+	</div>
+</div>
+<!-- <div class="wrapper w-full h-full bg-surface-500">
 	<header class="w-full">
 		<div  class="menu w-full h-24 flex justify-between items-center">
 			<div class="menu__logo">
@@ -40,4 +53,4 @@
 			{/each}
 		</div>
 	</div>
-</div>
+</div> -->
