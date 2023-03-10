@@ -80,14 +80,17 @@
 					{#if list.editing}
 							<div class="blur absolute right-0 top-0 bg-primary-700 w-full h-full opacity-[80%] z-10"></div>
 							<div class="add-link absolute h-full w-full right-0 top-0 flex justify-center items-center ">
-								<div class="add-link__menu h-[280px] w-[280px] bg-primary-800 rounded-2xl z-10 flex items-center justify-center flex-col">
-									<div class="add-link__name">
-										<input type="text" class="h-[24px] w-[180px] rounded-2xl my-6 text-black" bind:value={list.name}>			
+								<div class="add-link__menu h-[280px] w-[280px] bg-primary-800 rounded-2xl z-10 flex items-center justify-around flex-col">
+									
+									<div class="add-link__name mt-12">
+										<div class="ml-3">link-name</div>
+										<input type="text" class="h-[24px] w-[180px] rounded-2xl text-black" bind:value={nameInput}>			
 									</div>
 									<div class="add-link__url my-[20px]">
-										<input type="text" class="h-[24px] w-[180px] rounded-2xl my-6 text-black" bind:value={list.url}>
+										<div class="ml-3">link-url</div>
+										<input type="text" class="h-[24px] w-[180px] rounded-2xl text-black" bind:value={urlInput}>
 									</div>
-									<button class="add-link__submit" on:click={() => setEditing(i, false)}>Submit</button>
+									<button class="add-link__submit mb-3" on:click={() => setEditing(i, false)}>Submit</button>
 								</div>
 							</div>
 					{:else}
