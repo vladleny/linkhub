@@ -11,7 +11,7 @@
 		
 	
 	
-		let linkList = [{name: "linkhub", url: "linkhub.com", editing: false}];
+		let linkList = [{name: "Linkhub Trello", url: "https://trello.com/b/ai6u42GJ/linkhub", editing: false}];
 		let nameInput = "";
 		let urlInput = "";
 	
@@ -113,6 +113,7 @@
 		<div class="page-links w-[1600px] h-[600px] px-12 py-16 mb-24 overflow-y-auto grid grid-cols-1  2xl:grid-cols-6 gap-4 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-4  sm:grid-cols-2  lg:max-h-[100%] md:max-h-[100%] sm:max-h-[100%]">
 			{#each linkList as list, i}	
 			<div class="page__link  bg-primary-500 h-24 w-48 rounded-3xl flex justify-center items-center">
+					<a href="{list.url}" target="_blank" class="absolute h-24 w-48 rounded-3xl"></a>
 					<div class="page__link-container leading-none  overflow-hidden flex flex-col items-center">
 						{#if list.editing}
 								<div class="blur absolute right-0 top-0 bg-primary-700 w-full h-full opacity-[80%] z-10"></div>
