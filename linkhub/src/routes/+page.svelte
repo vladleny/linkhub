@@ -59,7 +59,7 @@
 <header class="w-full top-0 bg-surface-500">
 	<nav class="flex flex-row items-center w-full mx-auto justify-between">
 		<div class="logo bg-primary-500 w-24 h-24 flex flex-none justify-center items-center">
-			<div class="logo-text flex top-6 left-5 text-2xl leading-5 font-bold items-center">link<br>hub`</div>
+			<div class="logo-text flex top-6 left-5 text-2xl leading-5 font-bold items-center ">link<br>hub`</div>
 			<div class="logo-plus bg-surface-500 w-14 h-14 rounded-full flex justify-center items-center absolute ml-20 mt-20">
 				<button class="bg-primary-500 w-12 h-12 rounded-full flex justify-center items-center ml-1 mt-1 z-1" on:click={toggleModal}>
 					<div class="flex justify-center items-center">
@@ -88,7 +88,12 @@
 	
 	<div class="add-link absolute h-full w-full right-0 top-0 flex justify-center items-center ">
 		<div class="add-link__menu h-[280px] w-[280px] bg-primary-800 rounded-2xl z-10 flex items-center justify-around flex-col">
-			<button on:click={toggleModal} class="pl-[200px]">X</button>
+			<button on:click={toggleModal} class="pl-[200px] mt-2">
+				<div class="flex justify-center items-center rotate-45">
+					<div class="bg-white h-[2.5px] w-[16px] absolute "></div>
+					<div class="bg-white h-[16px] w-[2.5px] absolute "></div>
+				</div>
+			</button>
 			<div class="add-link__name">
 				<div class="ml-3">link-name</div>
 				<input type="text" class="h-[24px] w-[180px] rounded-2xl text-black" bind:value={nameInput}>			
@@ -123,12 +128,17 @@
 									</div>
 								</div>
 						{:else}
-						<div class="page__buttons flex justify-end w-[150px]">
-							<button class="z-0" on:click={() => setEditing(i, true)}>ch</button>
-							<div class="mx-1"></div>
-							<button class="z-0" on:click={() => deleteLink(i)}>x</button>
+						<div class="page__buttons flex justify-end  w-[150px]">
+							<button class="z-0" on:click={() => setEditing(i, true)}><img src="/edit.png" class="w-[17px] h-[17px]" alt=""></button>
+							<div class="mx-2"></div>
+							<button class="z-0 mr-2 pt-[2px]" on:click={() => deleteLink(i)}>
+								<div class="flex justify-center items-center rotate-45">
+									<div class="bg-white h-[2.5px] w-[16px] absolute "></div>
+									<div class="bg-white h-[16px] w-[2.5px] absolute "></div>
+								</div>
+						</button>
 						</div>
-						<div class="my-0.5 "></div>
+						<div class="my-[4px] "></div>
 						<div class="page__info mx-8 mb-2 pb-2 flex flex-col overflow-hidden whitespace-nowrap max-w-[150px]">
 							<div class="page__name font-bold text-md ">{list.name}</div>
 							<div class="page__url font-semibold text-sm text-secondary-500 lowercase">{list.url}</div>
